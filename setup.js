@@ -14,11 +14,12 @@ stdin = process.openStdin();
 process.env.NODE_ENV = process.env.NODE_ENV || "development";
 
 defaultConfig = {
-  source_dir: "./test/backups/",
-  destination_dir: "./test/backups/",
+  source_dir: "./backups/",
+  destination_dir: "./backups/",
   app_key: "0000000",
   app_secret: "000000000000",
-  access_token: null
+  access_token: null,
+  cron_schedule: "0 45 0 1/1 * ? *"
 };
 
 devConfigPath = "./config/development.yml";

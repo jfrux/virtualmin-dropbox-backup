@@ -7,6 +7,7 @@ yaml = require "js-yaml"
 config = require "../config"
 mkdirp = require("mkdirp").sync
 _ = require "underscore"
+schedule = require "node-schedule"
 path = require "path"
 async = require "async"
 
@@ -104,5 +105,9 @@ class Backup
         #   util.puts "Deleting local backup: " + path + ": " + ((if err then "error" else "ok"))
         #   #@next_file()
 
-backup = new Backup()
-#backup.upload()
+doBackup = () ->
+  backup = new Backup()
+  console.log "Running..."
+
+schedule.scheduleJob(config.cron_schedule, doBackup)
+console.log "Virtualmin-Backup-Dropbox\nStatus: Idle..."

@@ -109,5 +109,10 @@ doBackup = () ->
   backup = new Backup()
   console.log "Running..."
 
-schedule.scheduleJob(config.cron_schedule, doBackup)
-console.log "Virtualmin-Backup-Dropbox\nStatus: Idle..."
+rule = new schedule.RecurrenceRule()
+rule.hour = 0
+rule.minute = 45
+
+#runOnce
+doBackup()
+job = schedule.scheduleJob(rule, doBackup)

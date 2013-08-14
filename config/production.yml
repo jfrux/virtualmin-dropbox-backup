@@ -1,5 +1,5 @@
-dir: ./test/backups
-local_backup_dir: ./test/backups/
+destination_dir: ./backups/
+source_dir: ./backups/
 app_key: "0000000"
 app_secret: "000000000000"
 access_token: null

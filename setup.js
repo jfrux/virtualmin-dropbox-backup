@@ -14,8 +14,8 @@ stdin = process.openStdin();
 process.env.NODE_ENV = process.env.NODE_ENV || "development";
 
 defaultConfig = {
-  dir: "./test/backups",
-  local_backup_dir: "./test/backups/",
+  source_dir: "./test/backups/",
+  destination_dir: "./test/backups/",
   app_key: "0000000",
   app_secret: "000000000000",
   access_token: null

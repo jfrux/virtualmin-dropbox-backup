@@ -17,8 +17,8 @@ class Backup
   files: []
   constructor: ->
     datedFolder = dateFormat(new Date(), "yyyy-mm-dd")
-    @sourceDir = path.join config.local_backup_dir,datedFolder
-    @destDir = path.join config.dir,datedFolder
+    @sourceDir = path.join config.source_dir,datedFolder
+    @destDir = path.join config.destination_dir,datedFolder
     mkdirp @sourceDir
     mkdirp @destDir
     app = dbox.app(

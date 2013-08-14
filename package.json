@@ -1,0 +1,29 @@
+{
+  "name": "virtualmin-dropbox-backup",
+  "version": "0.0.1",
+  "description": "backup virtualmin virtual servers to a single dropbox account.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dropbox",
+    "virtualmin",
+    "backup",
+    "virtual",
+    "servers",
+    "maintenance",
+    "utilities",
+    "schedule"
+  ],
+  "author": "Joshua F. Rountree <joshua@swodev.com>",
+  "license": "BSD",
+  "dependencies": {
+    "dbox": "~0.6.3",
+    "dateformat": "~1.0.6-1.2.3",
+    "js-yaml": "~2.1.0",
+    "async": "~0.2.9",
+    "underscore": "~1.5.1",
+    "mkdirp": "~0.3.5"
+  }
+}
